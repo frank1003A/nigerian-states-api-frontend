@@ -10,7 +10,7 @@ const States = () => {
 
   const fecthStates = async () => {
     try {
-      fetch("http://localhost:3000/", {
+      fetch("https://nigerian-states-and-lga.vercel.app/", {
         method: "GET",
       }).then(async (response) => setState(await response.json()));
     } catch (error) {
@@ -69,7 +69,7 @@ const capitalizeStr = (str: string): string => {
               let selected = e.currentTarget.value;
               if (selected !== "all") {
                 fetch(
-                  `http://localhost:3000/state/region/?region=${selected}`,
+                  `https://nigerian-states-and-lga.vercel.app/state/region/?region=${selected}`,
                   {
                     method: "GET",
                   }

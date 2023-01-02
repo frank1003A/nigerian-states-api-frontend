@@ -12,7 +12,7 @@ const State = () => {
 
   const fecthStates = async () => {
     try {
-      fetch("http://localhost:3000/", {
+      fetch("https://nigerian-states-and-lga.vercel.app/", {
         method: "GET",
       }).then(async (response) => setStates(await response.json()));
     } catch (error) {
